@@ -16,8 +16,8 @@
         if (debug) {
             console.log('inside controller');
         }
-        $scope.totalUsers = 'initial';
-        $scope.latestUser = 'initial';
+        $scope.totalUsers = '';
+        $scope.latestUser = '';
         $scope.rootPath = '';
         var abUrl = String(document.location.href);
 

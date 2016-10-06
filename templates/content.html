@@ -1,0 +1,23 @@
+<div class="col-sm-12">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="header">
+                <h2>Admin Status</h2>
+                <p>
+                    View The status of Admin Builder
+                </p>
+            </div>
+            <div class="col-sm-12">
+                <h4>Total Users:</h4>
+                <p>
+                    {{totalUsers}}
+
+                </p>
+                <h4>Latest 5 Users:</h4>
+                <p ng-repeat="user in latestUsers">
+                    {{user}}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
