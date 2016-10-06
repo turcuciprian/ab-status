@@ -38,8 +38,9 @@
             },
             url: $scope.rootPath + '/wp-json/ab/getAdminStatus',
         }).then(function successCallback(response) {
+          console.log(response.data.latest);
           $scope.totalUsers = response.data.users.total_users;
-          $scope.latestUser = response.data.latest;
+          $scope.latestUsers = response.data.latest;
 
         }, function errorCallback(response) {
             // called asynchronously if an error occurs
