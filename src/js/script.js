@@ -27,25 +27,27 @@
         } else {
             $scope.rootPath = 'http://server.admin-builder.com';
         }
+        $scope.updatePage = function() {
+            $http({
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                url: $scope.rootPath + '/wp-json/ab/getAdminStatus',
+            }).then(function successCallback(response) {
+                console.log(response.data.latest);
+                $scope.totalUsers = response.data.users.total_users;
+                $scope.latestUsers = response.data.latest;
+
+            }, function errorCallback(response) {
+                // called asynchronously if an error occurs
+                // or server returns response with an error status.
+                return false;
+            });
+        };
+        $scope.updatePage();
 
 
 
-
-        $http({
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded'
-            },
-            url: $scope.rootPath + '/wp-json/ab/getAdminStatus',
-        }).then(function successCallback(response) {
-          console.log(response.data.latest);
-          $scope.totalUsers = response.data.users.total_users;
-          $scope.latestUsers = response.data.latest;
-
-        }, function errorCallback(response) {
-            // called asynchronously if an error occurs
-            // or server returns response with an error status.
-            return false;
-        });
     }]);
 })();
