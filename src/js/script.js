@@ -1,6 +1,6 @@
 (function() {
     //debug variable
-    var debug = true;
+    var debug = false;
     //The main module
     var slo = angular.module('slo', ['ui.bootstrap', 'ngAnimate', 'ngStorage']);
     // pcs.run(function($rootScope, $templateCache) {
