@@ -29,7 +29,7 @@
         }
         $scope.updatePage = function() {
           $scope.totalUsers = 'Loading...';
-          $scope.latestUser = 'Loading...';
+          $scope.latestUsers = 'Loading...';
             $http({
                 method: 'GET',
                 headers: {
