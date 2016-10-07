@@ -37,7 +37,6 @@
                 },
                 url: $scope.rootPath + '/wp-json/ab/getAdminStatus',
             }).then(function successCallback(response) {
-                console.log(response.data.latest);
                 $scope.totalUsers = response.data.users.total_users;
                 $scope.latestUsers = response.data.latest;
 
