@@ -28,6 +28,8 @@
             $scope.rootPath = 'http://server.admin-builder.com';
         }
         $scope.updatePage = function() {
+          $scope.totalUsers = 'Loading...';
+          $scope.latestUser = 'Loading...';
             $http({
                 method: 'GET',
                 headers: {
