@@ -48,7 +48,8 @@
                 return false;
             });
         };
-        $scope.updatePage();
+        setTimeout(function(){ $scope.updatePage(); }, 5000);
+
 
 
 
