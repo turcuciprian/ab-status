@@ -9,16 +9,14 @@
                 </p>
             </div>
             <div class="col-sm-12">
-                <h4>Total Users:</h4>
-                <p>
-                    {{totalUsers}}
-
-                </p>
+                <h4>Total Users:{{totalUsers}}</h4>
                 <h4>Latest 5 Users:</h4>
                 <p ng-repeat="user in latestUsers">
                     {{user}}
                 </p>
+                <h4>Total Logins:{{abLoginCount}}</h4>
             </div>
+            <div id="chartContainer" style="height: 400px; width: 100%;"></div>
         </div>
     </div>
 </div>

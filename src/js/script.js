@@ -19,6 +19,7 @@
         $scope.totalUsers = '';
         $scope.latestUser = '';
         $scope.rootPath = '';
+        $scope.abLoginCount = '';
         var abUrl = String(document.location.href);
 
         if (abUrl.indexOf('localhost') > 0) {
@@ -39,6 +40,7 @@
             }).then(function successCallback(response) {
                 $scope.totalUsers = response.data.users.total_users;
                 $scope.latestUsers = response.data.latest;
+                $scope.abLoginCount = response.data.abLoginCount;
 
             }, function errorCallback(response) {
                 // called asynchronously if an error occurs
