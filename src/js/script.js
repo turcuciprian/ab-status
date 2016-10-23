@@ -42,12 +42,14 @@
                 $scope.latestUsers = response.data.latest;
                 $scope.abLoginCount = response.data.abLoginCount;
 
+                var myVar = setTimeout(function(){ $scope.updatePage(); }, 5000);
+
             }, function errorCallback(response) {
                 // called asynchronously if an error occurs
                 // or server returns response with an error status.
                 return false;
             });
+
         };
-        setTimeout(function(){ $scope.updatePage(); }, 5000);
     }]);
 })();
