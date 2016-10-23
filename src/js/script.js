@@ -31,6 +31,7 @@
         $scope.updatePage = function() {
           $scope.totalUsers = 'Loading...';
           $scope.latestUsers = ['Loading...'];
+          $scope.abLoginCount = 'Loading...';
             $http({
                 method: 'GET',
                 headers: {
@@ -42,7 +43,7 @@
                 $scope.latestUsers = response.data.latest;
                 $scope.abLoginCount = response.data.abLoginCount;
 
-                var myVar = setTimeout(function(){ $scope.updatePage(); }, 5000);
+                var myVar = setTimeout(function(){ $scope.updatePage(); }, 60000);
 
             }, function errorCallback(response) {
                 // called asynchronously if an error occurs
