@@ -30,7 +30,6 @@
         }
         $scope.updatePage = function() {
           $scope.totalUsers = 'Loading...';
-          $scope.latestUsers = ['Loading...'];
           $scope.abLoginCount = 'Loading...';
             $http({
                 method: 'GET',
@@ -40,7 +39,6 @@
                 url: $scope.rootPath + '/wp-json/ab/getAdminStatus',
             }).then(function successCallback(response) {
                 $scope.totalUsers = response.data.users.total_users;
-                $scope.latestUsers = response.data.latest;
                 $scope.abLoginCount = response.data.abLoginCount;
 
                 var myVar = setTimeout(function(){ $scope.updatePage(); }, 60000);
