@@ -40,6 +40,7 @@
             }).then(function successCallback(response) {
                 $scope.totalUsers = response.data.users.total_users;
                 $scope.abLoginCount = response.data.abLoginCount;
+                $scope.abSCount = response.data.abSCount;
 
                 var myVar = setTimeout(function(){ $scope.updatePage(); }, 60000);
 
